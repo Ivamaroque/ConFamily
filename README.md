@@ -70,23 +70,13 @@ Com uma interface amigável e recursos inovadores, o ConFamily permite que você
 - ✅ **Flexível**: Adapte-se a diferentes modelos de divisão de gastos
 - ✅ **Transparente**: Visualize claramente quem gastou o quê
 
-## 🤝 Contribuir
-
-Contribuições são bem-vindas! Sinta-se à vontade para:
-
-1. Fazer fork do projeto
-2. Criar uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
-5. Abrir um Pull Request
-
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 ## 👥 Autores
 
-Desenvolvido com 💚 por [@ivama](https://github.com/ivama)
+Desenvolvido com 💚 por [@ivamaroque](https://github.com/ivamaroque)
 
 ---
 
