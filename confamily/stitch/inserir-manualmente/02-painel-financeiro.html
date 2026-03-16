@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#001f2a",
+              "outline": "#727781",
+              "surface-bright": "#f4faff",
+              "secondary-fixed-dim": "#59de9b",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#80d8a6",
+              "tertiary-container": "#005534",
+              "surface-container-low": "#e6f6ff",
+              "surface-container-highest": "#c9e7f7",
+              "inverse-primary": "#a3c9ff",
+              "error": "#ba1a1a",
+              "secondary": "#006d43",
+              "tertiary-fixed": "#9cf5c1",
+              "on-primary-fixed-variant": "#004882",
+              "on-tertiary-container": "#73cb99",
+              "surface-container-high": "#ceedfd",
+              "on-background": "#001f2a",
+              "secondary-fixed": "#78fbb6",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#8abcff",
+              "inverse-surface": "#163440",
+              "on-tertiary-fixed-variant": "#005232",
+              "on-secondary-container": "#007147",
+              "on-tertiary-fixed": "#002111",
+              "primary-fixed": "#d3e4ff",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "outline-variant": "#c2c6d1",
+              "primary-fixed-dim": "#a3c9ff",
+              "secondary-container": "#75f8b3",
+              "on-surface-variant": "#424750",
+              "on-primary-fixed": "#001c38",
+              "surface-tint": "#27609d",
+              "primary-container": "#004b87",
+              "surface": "#f4faff",
+              "surface-dim": "#c0dfee",
+              "surface-container": "#d9f2ff",
+              "primary": "#003461",
+              "inverse-on-surface": "#e0f4ff",
+              "surface-variant": "#c9e7f7",
+              "on-error-container": "#93000a",
+              "tertiary": "#003c23",
+              "background": "#f4faff",
+              "on-secondary-fixed-variant": "#005232",
+              "on-secondary-fixed": "#002111"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c9e7f7;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 bg-surface/80 backdrop-blur-md px-4 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-primary-container text-on-primary-container w-10 h-10 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<h1 class="font-headline font-bold text-xl text-on-surface">Financeiro</h1>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-high">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+</button>
+</header>
+<main class="px-4 pt-2 space-y-6">
+<!-- Hero Balance Section (The Atelier Aesthetic) -->
+<section class="relative overflow-hidden bg-gradient-to-br from-primary to-primary-container p-6 rounded-xl text-on-primary shadow-lg">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label text-sm opacity-80 uppercase tracking-wider">Saldo Disponível</span>
+<span class="material-symbols-outlined opacity-60" data-icon="visibility">visibility</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline text-lg opacity-80">R$</span>
+<h2 class="font-headline font-extrabold text-4xl">12.450,00</h2>
+</div>
+<div class="mt-6 flex gap-4">
+<div class="flex-1 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+<span class="font-label text-[10px] uppercase opacity-70 block mb-1">Entradas</span>
+<div class="flex items-center text-secondary-fixed-dim font-bold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="arrow_upward">arrow_upward</span>
+                            R$ 4.200
+                        </div>
+</div>
+<div class="flex-1 bg-white/10 p-3 rounded-lg backdrop-blur-sm">
+<span class="font-label text-[10px] uppercase opacity-70 block mb-1">Saídas</span>
+<div class="flex items-center text-error-container font-bold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="arrow_downward">arrow_downward</span>
+                            R$ 2.150
+                        </div>
+</div>
+</div>
+</div>
+<!-- Decorative circle -->
+<div class="absolute -right-12 -top-12 w-48 h-48 rounded-full bg-secondary opacity-20 blur-3xl"></div>
+</section>
+<!-- Bento Grid: Chart & Quick Stats -->
+<section class="grid grid-cols-6 gap-4">
+<!-- Spending Chart Card -->
+<div class="col-span-6 bg-surface-container-lowest p-5 rounded-xl border-none">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline font-semibold text-lg">Gasto Mensal</h3>
+<div class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-xs font-medium">Outubro</div>
+</div>
+<div class="h-32 flex items-end justify-between gap-2 px-1">
+<div class="w-full bg-surface-container-highest rounded-t-sm relative group h-[40%]">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100">600</div>
+</div>
+<div class="w-full bg-surface-container-highest rounded-t-sm relative group h-[65%]"></div>
+<div class="w-full bg-surface-container-highest rounded-t-sm relative group h-[45%]"></div>
+<div class="w-full bg-primary rounded-t-sm relative group h-[85%]">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary">1.250</div>
+</div>
+<div class="w-full bg-surface-container-highest rounded-t-sm relative group h-[30%]"></div>
+<div class="w-full bg-surface-container-highest rounded-t-sm relative group h-[55%]"></div>
+<div class="w-full bg-secondary rounded-t-sm relative group h-[75%]"></div>
+</div>
+<div class="flex justify-between mt-3 text-[10px] font-medium text-on-surface-variant/60 uppercase tracking-tighter">
+<span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span>
+</div>
+</div>
+<!-- Mini Progress Card -->
+<div class="col-span-3 bg-secondary-container/30 p-4 rounded-xl flex flex-col justify-between border-none">
+<span class="material-symbols-outlined text-secondary" data-icon="savings" data-weight="fill">savings</span>
+<div>
+<span class="text-[10px] text-on-secondary-container font-semibold uppercase">Reserva</span>
+<p class="font-headline font-bold text-on-secondary-container">R$ 8.500</p>
+</div>
+</div>
+<!-- Mini Limit Card -->
+<div class="col-span-3 bg-surface-container-high p-4 rounded-xl flex flex-col justify-between border-none">
+<span class="material-symbols-outlined text-primary" data-icon="credit_card">credit_card</span>
+<div>
+<span class="text-[10px] text-on-surface-variant font-semibold uppercase">Límite Cartão</span>
+<p class="font-headline font-bold text-primary">R$ 3.200</p>
+</div>
+</div>
+</section>
+<!-- Transaction List -->
+<section class="space-y-4">
+<div class="flex justify-between items-center">
+<h3 class="font-headline font-semibold text-lg">Transações Recentes</h3>
+<button class="text-primary font-label text-sm font-semibold">Ver tudo</button>
+</div>
+<div class="space-y-3">
+<!-- Transaction Item 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline font-semibold text-sm truncate text-on-surface">Tênis Nike 1/3</h4>
+<p class="text-xs text-on-surface-variant">Vestuário • Hoje</p>
+</div>
+<div class="text-right shrink-0">
+<p class="font-headline font-bold text-sm text-on-surface">- R$ 149,90</p>
+<span class="text-[10px] bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Crédito</span>
+</div>
+</div>
+<!-- Transaction Item 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline font-semibold text-sm truncate text-on-surface">Restaurante Sabor Real</h4>
+<p class="text-xs text-on-surface-variant">Alimentação • Ontem</p>
+</div>
+<div class="text-right shrink-0">
+<p class="font-headline font-bold text-sm text-on-surface">- R$ 82,00</p>
+<span class="text-[10px] bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Débito</span>
+</div>
+</div>
+<!-- Transaction Item 3 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline font-semibold text-sm truncate text-on-surface">Transferência Recebida</h4>
+<p class="text-xs text-on-surface-variant">Pix • 22 Out</p>
+</div>
+<div class="text-right shrink-0">
+<p class="font-headline font-bold text-sm text-secondary">+ R$ 1.200,00</p>
+<span class="text-[10px] bg-secondary-container/50 px-2 py-0.5 rounded text-on-secondary-container">Recebido</span>
+</div>
+</div>
+<!-- Transaction Item 4 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="subscriptions">subscriptions</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline font-semibold text-sm truncate text-on-surface">Netflix 5/12</h4>
+<p class="text-xs text-on-surface-variant">Serviços • 21 Out</p>
+</div>
+<div class="text-right shrink-0">
+<p class="font-headline font-bold text-sm text-on-surface">- R$ 55,90</p>
+<span class="text-[10px] bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Assinatura</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl shadow-xl flex items-center justify-center z-50 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 h-20 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/10 flex items-center justify-around px-4 z-40">
+<div class="flex flex-col items-center gap-1 group">
+<div class="bg-primary-container text-primary px-5 py-1 rounded-full">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+</div>
+<span class="text-[10px] font-bold text-primary">Painel</span>
+</div>
+<div class="flex flex-col items-center gap-1 group text-on-surface-variant/60">
+<div class="px-5 py-1">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<span class="text-[10px] font-medium">Gastos</span>
+</div>
+<div class="flex flex-col items-center gap-1 group text-on-surface-variant/60">
+<div class="px-5 py-1">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</div>
+<span class="text-[10px] font-medium">Ajustes</span>
+</div>
+</nav>
+</body></html>

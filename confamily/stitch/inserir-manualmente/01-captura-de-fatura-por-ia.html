@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#001f2a",
+              "outline": "#727781",
+              "surface-bright": "#f4faff",
+              "secondary-fixed-dim": "#59de9b",
+              "on-primary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#80d8a6",
+              "tertiary-container": "#005534",
+              "surface-container-low": "#e6f6ff",
+              "surface-container-highest": "#c9e7f7",
+              "inverse-primary": "#a3c9ff",
+              "error": "#ba1a1a",
+              "secondary": "#006d43",
+              "tertiary-fixed": "#9cf5c1",
+              "on-primary-fixed-variant": "#004882",
+              "on-tertiary-container": "#73cb99",
+              "surface-container-high": "#ceedfd",
+              "on-background": "#001f2a",
+              "secondary-fixed": "#78fbb6",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#8abcff",
+              "inverse-surface": "#163440",
+              "on-tertiary-fixed-variant": "#005232",
+              "on-secondary-container": "#007147",
+              "on-tertiary-fixed": "#002111",
+              "primary-fixed": "#d3e4ff",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "outline-variant": "#c2c6d1",
+              "primary-fixed-dim": "#a3c9ff",
+              "secondary-container": "#75f8b3",
+              "on-surface-variant": "#424750",
+              "on-primary-fixed": "#001c38",
+              "surface-tint": "#27609d",
+              "primary-container": "#004b87",
+              "surface": "#f4faff",
+              "surface-dim": "#c0dfee",
+              "surface-container": "#d9f2ff",
+              "primary": "#003461",
+              "inverse-on-surface": "#e0f4ff",
+              "surface-variant": "#c9e7f7",
+              "on-error-container": "#93000a",
+              "tertiary": "#003c23",
+              "background": "#f4faff",
+              "on-secondary-fixed-variant": "#005232",
+              "on-secondary-fixed": "#002111"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #003461 0%, #004b87 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 glass-panel border-b border-outline-variant/15 px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold text-on-surface">Financeiro</h1>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+</div>
+</header>
+<main class="max-w-md mx-auto px-6 pt-8">
+<!-- Hero Section: AI Explanation -->
+<section class="mb-10 text-center">
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-xl bg-secondary-container text-secondary mb-6">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<h2 class="text-3xl font-extrabold text-on-surface mb-3 leading-tight">Captura Inteligente</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed px-4">
+                Nossa IA processa suas faturas automaticamente. Carregue um PDF ou tire uma foto para extrair valores, datas e fornecedores instantaneamente.
+            </p>
+</section>
+<!-- Bento Grid Interaction Zone -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<!-- Camera Option -->
+<button class="col-span-2 flex flex-col items-center justify-center p-8 bg-surface-container-lowest border border-outline-variant/15 rounded-xl hover:bg-surface-container-low transition-all group">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+</div>
+<span class="font-semibold text-on-surface">Tirar Foto</span>
+<span class="text-xs text-on-surface-variant mt-1">Escaneie agora</span>
+</button>
+<!-- Upload PDF Option -->
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest border border-outline-variant/15 rounded-xl hover:bg-surface-container-low transition-all">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-secondary text-xl">picture_as_pdf</span>
+</div>
+<span class="text-sm font-semibold text-on-surface">PDF</span>
+</button>
+<!-- Browse Files Option -->
+<button class="flex flex-col items-center justify-center p-6 bg-surface-container-lowest border border-outline-variant/15 rounded-xl hover:bg-surface-container-low transition-all">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-on-surface-variant text-xl">folder_open</span>
+</div>
+<span class="text-sm font-semibold text-on-surface">Galeria</span>
+</button>
+</div>
+<!-- AI Capabilities Card -->
+<div class="p-5 bg-surface-container-low rounded-xl">
+<h3 class="text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+                O que extraímos
+            </h3>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-sm text-on-surface">Valor Total e Impostos</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-sm text-on-surface">Data de Vencimento</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-sm text-on-surface">CNPJ e Nome do Emissor</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-sm text-on-surface">Linha Digitável (Boleto)</span>
+</div>
+</div>
+</div>
+<!-- Security Badge -->
+<div class="mt-8 flex items-center justify-center gap-2 py-4 border-t border-outline-variant/15">
+<span class="material-symbols-outlined text-outline text-lg">lock</span>
+<span class="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest">Processamento Criptografado</span>
+</div>
+</main>
+<!-- FAB (Floating Action Button) -->
+<div class="fixed bottom-24 right-6 z-50">
+<button class="w-14 h-14 rounded-xl primary-gradient text-on-primary shadow-xl flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl">add</span>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 glass-panel border-t border-outline-variant/15 px-6 h-20 flex items-center justify-between z-40">
+<button class="flex flex-col items-center gap-1 group">
+<div class="px-5 py-1 rounded-full transition-colors group-hover:bg-surface-container">
+<span class="material-symbols-outlined text-on-surface-variant">dashboard</span>
+</div>
+<span class="text-[10px] font-medium text-on-surface-variant">Painel</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<div class="px-5 py-1 rounded-full bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<span class="text-[10px] font-bold text-on-secondary-container">Gastos</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<div class="px-5 py-1 rounded-full transition-colors group-hover:bg-surface-container">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</div>
+<span class="text-[10px] font-medium text-on-surface-variant">Ajustes</span>
+</button>
+</nav>
+<!-- Visual Accent Element -->
+<div class="fixed top-0 right-0 -z-10 w-64 h-64 bg-secondary-container/20 rounded-full blur-[100px]"></div>
+<div class="fixed bottom-0 left-0 -z-10 w-64 h-64 bg-primary-fixed/20 rounded-full blur-[100px]"></div>
+</body></html>
